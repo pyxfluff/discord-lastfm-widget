@@ -1,0 +1,11 @@
+[project]
+name = "lastfm-widget"
+version = "1.0.0"
+description = "Display your last.fm profile on your Discord!"
+#authors = [{name = "pyxfluff"}]
+requires-python = ">=3.13"
+dependencies = [
+    "httpx",
+    "orjson",
+    "rich"
+]

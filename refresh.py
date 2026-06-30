@@ -121,9 +121,13 @@ while True:
     for user in config["users"]:
         logger.print(f"[blue]Checking [bold]{user["name"]}[/b][/]")
 
-        push_data_to_discord(user)
+        try:
+            push_data_to_discord(user)
 
-        logger.print("[green]Finished![/]")
+            logger.print("[green]Finished![/]")
+        except Exception as e:
+            logger.print("[red]Failed to refresh! Please refer to the error below:")
+            logger.print_exception(width=120)
     
     logger.print(f"[blue]Sleeping for {refresh_mins} minutes")
     sleep(refresh_mins * 60)

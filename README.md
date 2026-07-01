@@ -6,6 +6,9 @@ Add a widget to your Discord profile with your Last.fm statistics!
 
 *Warning: Discord made it so you can't put widgets on your profile you don't own. You need to make your own bot to use this now.*
 
+## Requirements
+- Python (3.13 or newer)
+- `httpx`, `rich`, `orjson`
 
 ## Instructions
 1. Set up the widget
@@ -25,6 +28,7 @@ Add a widget to your Discord profile with your Last.fm statistics!
     - `cp config.json.templ config.json`
     - This is where you add your Discord app ID, user ID, etc. If you don't know that to put, read the guide. Feel free to put as many users as you want!
 4. Run the script!
+    - `python3 refresh.py`
 
 After you add the widget to your profile, it should now reload every X minutes (set in the config file).
 
